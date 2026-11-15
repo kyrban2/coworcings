@@ -1,0 +1,48 @@
+.promo {
+	&__wrapper {
+		padding: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		height: 600px;
+		background-image:
+			linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+			url('./../img/promo/promo-bg.jpg');
+		@media (-webkit-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			background-image:
+				linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+				url('./../img/promo/promo-bg@2x.jpg');
+		}
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 40px;
+		color: #fff;
+	}
+	&__content {
+		max-width: 678px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 40px;
+	}
+	&__title {
+		font-weight: 800;
+		font-size: 72px;
+		line-height: 1;	
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 1;
+		p + p {
+			margin-top: 0.5em;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		gap: 20px;
+	}
+}

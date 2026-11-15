@@ -1,0 +1,63 @@
+.button {
+	display: inline-block;
+	font-weight: 700;
+	border-radius: 80px;
+	padding: 10px 20px;
+	font-size: 16px;
+	transition:
+		color 0.2s ease-in,
+		background 0.2s ease-in;
+	color: #fff;
+}
+.btn-dark {
+	background: #000;
+
+	&:hover {
+		background: #333;
+	}
+}
+.promo__btns {
+}
+
+.button-green {
+	background: #00ae6c;
+	&:hover {
+		background: #01ef94;
+	}
+}
+.btn-outline,
+a.btn-outline {
+	border: 1px solid #fff;
+	padding: 9px 20px;
+	&:hover {
+		color: #000;
+		background: #e4f8f181;
+	}
+}
+.btn-price,
+a.btn-price {
+	border: 1px solid #000;
+	color: #000;
+	&:hover {
+		background-color: #000;
+		color: #fff;
+	}
+}
+.btn-watsapp,
+a.btn-watsapp {
+	display:inline-flex;
+	column-gap: 10px;
+	background: #00ae6c;
+	&:hover{
+			background: #007347;
+	}
+}
+.btn-tg,
+a.btn-tg {
+	display:inline-flex;
+	column-gap: 10px;
+	background: #039be5;
+	&:hover{
+			background: #035d8a;
+	}
+}

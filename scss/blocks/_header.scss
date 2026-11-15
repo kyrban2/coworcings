@@ -1,0 +1,13 @@
+.header {
+	padding: 40px 0;
+	&__block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 30px;
+	}
+	&__logo{
+		flex-shrink: 0;
+	}
+	
+}
