@@ -1,9 +1,15 @@
 .slider{
 display: flex;
+justify-content: center;
 column-gap: 10px;
 overflow: hidden;
-
+@include mobile{
+	overflow: scroll;
+}
 &__img {
 	border-radius: 8px;
+}
+@include mobile{
+	height: 250px;
 }
 }

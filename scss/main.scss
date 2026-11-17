@@ -2,11 +2,13 @@
 @import "./base/reset";
 @import "./base/mixins.scss";
 @import "./base/base.scss";
+@import "./base/container.scss";
 // Blocks
 @import "./blocks/_header.scss";
 @import "./blocks/_nav.scss";
 @import "./blocks/_btns.scss";
 @import "./blocks/_promo.scss";
+@import "./blocks/main.scss";
 @import "./blocks/benefits.scss";
 @import "./blocks/benefit.scss";
 @import "./blocks/locations.scss";

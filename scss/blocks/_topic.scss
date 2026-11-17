@@ -1,6 +1,12 @@
 .topic {
 	padding: 30px;
 	border-top: 1px solid #ececf1;
+	@include tablet{
+		padding: 17px;
+		}
+	@include mobile{
+		padding: 15px;
+	}
 
 	
 
@@ -15,11 +21,20 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.topic__icon{
+	@include mobile{
+		width: 32px;
+		height: 32px;
+	}
+}
 .topic__title {
 	font-weight: 700;
 font-size: 22px;
 line-height: 1;
 color: #000;
+@include mobile{
+	font-size: 18px;
+}
 }
 
 .topic__content {
@@ -29,6 +44,10 @@ color: #000;
 	gap:1em;
 	line-height: 1.5;
 	display: none;
+	@include mobile{
+		font-size: 14px;
+		padding: 13px;
+	}
 }
 .topic__content--open {
 	display: flex;

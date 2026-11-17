@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=360, initial-scale=1, shrink-to-fit=no">
 		<title>Coworks</title>
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
@@ -11,7 +12,7 @@
 	<body>
 		<!-- HEADER -->
 		<header class="header">
-			<div class="container">
+			<div class="container container--mobile-fluid">
 				<div class="header__block">
 					<!-- logo -->
 					<div class="header__logo">
@@ -42,6 +43,9 @@
 							</ul>
 						</nav>
 					</div>
+					<button class="header__nav-btn">
+						<img src="./img/icon/Nav BtnOpen.svg" alt="" />
+					</button>
 				</div>
 			</div>
 		</header>
@@ -80,7 +84,8 @@
 						</div>
 						<div class="benefits__desc">
 							<h2 class="benefits__title">
-								Лучшее пространство для вашего бизнеса
+								Лучшее пространство<br />
+								для вашего бизнеса
 							</h2>
 
 							<div class="benefits__text">
@@ -153,13 +158,23 @@
 						</div>
 						<div class="locations__controls">
 							<button>
-								<img src="./img/icon/arrow-left-line.svg" alt="Prev" />
+								<img
+									class="locations__controls-img"
+									src="./img/icon/arrow-left-line.svg"
+									alt="Prev"
+								/>
 							</button>
 							<button>
-								<img src="./img/icon/arrow-right-line.svg" alt="Next" />
+								<img
+									class="locations__controls-img"
+									src="./img/icon/arrow-right-line.svg"
+									alt="Next"
+								/>
 							</button>
 						</div>
 					</div>
+				</div>
+				<div class="container container--mobile-fluid">
 					<div class="slider">
 						<img
 							src="./img/slider/slide-01.jpg"
@@ -179,6 +194,24 @@
 							alt=""
 							class="slider__img"
 						/>
+					</div>
+				</div>
+				<div class="container ">
+					<div class="locations__controls locations__controls--mobile">
+						<button>
+							<img
+								class="locations__controls-img"
+								src="./img/icon/arrow-left-line.svg"
+								alt="Prev"
+							/>
+						</button>
+						<button>
+							<img
+								class="locations__controls-img"
+								src="./img/icon/arrow-right-line.svg"
+								alt="Next"
+							/>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -555,5 +588,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src='./index.js'></script>
 	</body>
 </html>

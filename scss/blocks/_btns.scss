@@ -15,8 +15,9 @@
 	&:hover {
 		background: #333;
 	}
-}
-.promo__btns {
+	@include tablet {
+		display: none;
+	}
 }
 
 .button-green {
@@ -45,19 +46,19 @@ a.btn-price {
 }
 .btn-watsapp,
 a.btn-watsapp {
-	display:inline-flex;
+	display: inline-flex;
 	column-gap: 10px;
 	background: #00ae6c;
-	&:hover{
-			background: #007347;
+	&:hover {
+		background: #007347;
 	}
 }
 .btn-tg,
 a.btn-tg {
-	display:inline-flex;
+	display: inline-flex;
 	column-gap: 10px;
 	background: #039be5;
-	&:hover{
-			background: #035d8a;
+	&:hover {
+		background: #035d8a;
 	}
 }

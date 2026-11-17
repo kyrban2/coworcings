@@ -1,13 +1,19 @@
-.map {
-}
+
 
 .map__title {
 	margin-bottom: 20px;
+	@include mobile{
+		margin-bottom: 10px;
+	}
 }
 
 .map__desc {
 	margin-bottom: 20px;
 	line-height: 1.5;
+	@include mobile{
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
 p{
 	margin-bottom: 0.5em;
 }
@@ -15,4 +21,7 @@ p{
 
 .map__img{
 	border-radius: 40px;
+	@include mobile{
+		border-radius: 20px;
+	}
 }

@@ -1,10 +1,12 @@
 .nav-footer {
 	display: flex;
-	column-gap: 40px;
+	gap: 15px 40px;
 	align-items: center;
+	@include mobile {
+		flex-direction: column;
+	}
 }
-.nav-footer__item {
-}
+
 a.nav-footer__link {
 	transition: color 0.2s ease-in;
 }
