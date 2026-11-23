@@ -1337,7 +1337,7 @@ a.nav-footer__link:hover {
   transition: all 0.2s ease-in;
   width: 16px;
   height: 13px;
-  background-image: url("../../img/icon/tick.svg");
+  background-image: url("./../img/icon/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }/*# sourceMappingURL=main.css.map */
