@@ -9,12 +9,13 @@
 		/>
 		<title>Coworks</title>
 		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./js/tine/tiny-slider.css" />
 		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
 		<link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png" />
 	</head>
 	<body>
 		<!-- HEADER -->
-		<header class="header">
+		<header class="header" id="top">
 			<div class="container container--mobile-fluid">
 				<div class="header__block">
 					<!-- logo -->
@@ -28,30 +29,67 @@
 						<nav class="nav">
 							<ul class="nav__list">
 								<li class="nav__item">
-									<a class="nav__link" href="">Локация</a>
+									<a class="nav__link" href="#location">Локация</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="">Сервис</a>
+									<a class="nav__link" href="#services">Сервис</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="">Тарифы</a>
+									<a class="nav__link" href="#price">Тарифы</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="">Расположение</a>
+									<a class="nav__link" href="#map">Расположение</a>
 								</li>
 								<!-- Button -->
 								<li class="nav__item">
-									<button class="button btn-dark">Оставить заявку</button>
+									<button data-action="modal" class="button btn-dark">
+										Оставить заявку
+									</button>
 								</li>
 							</ul>
 						</nav>
 					</div>
-					<button class="header__nav-btn">
-						<img src="./img/icon/Nav BtnOpen.svg" alt="" />
+					<button class="header__nav-btn" id="openMobileNav">
+						<img src="./img/icon/navBtnOpen.svg" alt="" />
 					</button>
 				</div>
 			</div>
 		</header>
+		<!-- mjbil-nav -->
+		<section class="mobile-nav">
+			<h2 class="visually-hidden">Мобильная навигация</h2>
+			<div class="mobile-nav__header">
+				<a href="" class="mobile-nav__logo logo">
+					<img src="./img/icon/CoWorks.svg" alt="icon"
+				/></a>
+				<button class="mobile-nav__btn" id="closeButtonNav">
+					<img src="./img/icon/navBtnClose.svg" alt="" />
+				</button>
+			</div>
+			<div class="mobile-nav__body">
+				<ul class="mobile-nav__list">
+					<li>
+						<a href="#location">Локация</a>
+					</li>
+					<li>
+						<a href="#services">Сервис</a>
+					</li>
+					<li>
+						<a href="#price">Тарифы</a>
+					</li>
+					<li>
+						<a href="#map">Расположение</a>
+					</li>
+					<!-- Button -->
+					<li>
+						<button data-action="modal" class="button btn-dark">
+							Оставить заявку
+						</button>
+					</li>
+				</ul>
+			</div>
+		</section>
+
 		<!-- MAIN -->
 		<main class="main">
 			<section class="promo">
@@ -66,16 +104,18 @@
 								</p>
 							</div>
 							<div class="promo__btns">
-								<button class="button button-green">Оставить заявку</button>
+								<button data-action="modal" class="button button-green">
+									Оставить заявку
+								</button>
 
-								<a href="#!" class="button btn-outline">Исследовать</a>
+								<a href="#benefits" class="button btn-outline">Исследовать</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- benefits -->
-			<section class="benefits">
+			<section class="benefits" id="benefits">
 				<div class="container">
 					<div class="benefits__row">
 						<div class="benefits__img">
@@ -153,21 +193,21 @@
 			</section>
 
 			<!-- Locations -->
-			<section class="locations">
+			<section class="locations" id="location">
 				<div class="container">
 					<div class="locations__row">
 						<div class="locations__title">
 							<h2 class="title-section">Локации и рабочие пространства</h2>
 						</div>
 						<div class="locations__controls">
-							<button>
+							<button class="prev">
 								<img
 									class="locations__controls-img"
 									src="./img/icon/arrow-left-line.svg"
 									alt="Prev"
 								/>
 							</button>
-							<button>
+							<button class="next">
 								<img
 									class="locations__controls-img"
 									src="./img/icon/arrow-right-line.svg"
@@ -177,38 +217,112 @@
 						</div>
 					</div>
 				</div>
-				<div class="container container--mobile-fluid">
+				<div
+					class="container container--tablet-fluid container--mobile-no-padding"
+				>
 					<div class="slider">
-						<img
-							src="./img/slider/slide-01.jpg"
-							srcset="./img/slider/slide-01@2x.jpg 2x"
-							alt=""
-							class="slider__img"
-						/>
-						<img
-							src="./img/slider/slide-02.jpg"
-							srcset="./img/slider/slide-02@2x.jpg 2x"
-							alt=""
-							class="slider__img"
-						/>
-						<img
-							src="./img/slider/slide-03.jpg"
-							srcset="./img/slider/slide-03@2x.jpg 2x"
-							alt=""
-							class="slider__img"
-						/>
+						<div>
+							<img
+								width="525"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-01.jpg"
+								data-srcset="./img/slider/slide-01@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="300"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-02.jpg"
+								data-srcset="./img/slider/slide-02@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="435"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-03.jpg"
+								data-srcset="./img/slider/slide-03@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="300"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-04.jpg"
+								data-srcset="./img/slider/slide-04@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="300"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-05.jpg"
+								data-srcset="./img/slider/slide-05@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="300"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-06.jpg"
+								data-srcset="./img/slider/slide-06@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="525"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-07.jpg"
+								data-srcset="./img/slider/slide-07@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="525"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-08.jpg"
+								data-srcset="./img/slider/slide-08@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
+						<div>
+							<img
+								width="525"
+								src="data:image/gif;base64,R0lGODlhAQABAPAAAMzMzAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+								data-src="./img/slider/slide-09.jpg"
+								data-srcset="./img/slider/slide-09@2x.jpg 2x"
+								alt="Slide"
+								class="tns-lazy-img"
+							/>
+						</div>
 					</div>
 				</div>
 				<div class="container">
 					<div class="locations__controls locations__controls--mobile">
-						<button>
+						<button class="prev">
 							<img
 								class="locations__controls-img"
 								src="./img/icon/arrow-left-line.svg"
 								alt="Prev"
 							/>
 						</button>
-						<button>
+						<button class="next">
 							<img
 								class="locations__controls-img"
 								src="./img/icon/arrow-right-line.svg"
@@ -219,7 +333,7 @@
 				</div>
 			</section>
 			<!-- services -->
-			<section class="services">
+			<section class="services" id="services">
 				<div class="container">
 					<div class="services__title">
 						<h2 class="title-section">Сервисы</h2>
@@ -279,7 +393,7 @@
 								alt="icon"
 								class="service__icon"
 							/>
-							<h3 class="service__title">Безопасная  система доступа</h3>
+							<h3 class="service__title">Безопасная система доступа</h3>
 							<p>
 								3-уровневая система доступа обеспечивает безопасность в
 								коворкинге и смарт-офисе.
@@ -325,7 +439,7 @@
 				</div>
 			</section>
 			<!-- price -->
-			<section class="price">
+			<section class="price" id="price">
 				<div class="container">
 					<div class="price__title">
 						<h2 class="title-section">Тарифы</h2>
@@ -357,7 +471,9 @@
 								</ul>
 
 								<div class="card__btn">
-									<button class="button btn-price">Оставить заявку</button>
+									<button data-action="modal" class="button btn-price">
+										Оставить заявку
+									</button>
 								</div>
 							</div>
 						</article>
@@ -389,7 +505,9 @@
 								</ul>
 
 								<div class="card__btn">
-									<button class="button btn-price">Оставить заявку</button>
+									<button data-action="modal" class="button btn-price">
+										Оставить заявку
+									</button>
 								</div>
 							</div>
 						</article>
@@ -420,7 +538,9 @@
 									</li>
 								</ul>
 								<div class="card__btn">
-									<button class="button btn-price">Оставить заявку</button>
+									<button data-action="modal" class="button btn-price">
+										Оставить заявку
+									</button>
 								</div>
 							</div>
 						</article>
@@ -446,14 +566,16 @@
 								<a href="" class="button btn-watsapp"
 									><img src="./img/icon/WhatsApp-icon.svg" alt="" />WhatsApp</a
 								>
-								<button class="button btn-outline">Оставить заявку</button>
+								<button data-action="modal" class="button btn-outline">
+									Оставить заявку
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="map">
+			<section class="map" id="map">
 				<div class="container">
 					<div class="map__title">
 						<h2 class="title-section">Расположение</h2>
@@ -461,7 +583,18 @@
 					<div class="map__desc">
 						<p>Пресненская набережная, дом 12, 20 этаж.</p>
 					</div>
-					<img class="map__img" src="./img/map/map.jpg" alt="" />
+
+					<iframe
+						class="map__iframe"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.4989263974053!2d37.5348662756353!3d55.74983469222113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdc1916431d%3A0x5545486613a8f9a4!2z0KLQpiDQkNGE0LjQvNC-0LvQuyDRgdC40YLQuCwg0J_RgNC10YHQvdC10L3RgdC60LDRjyDQvdCw0LEuLCAxMiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEyMzMxNw!5e0!3m2!1sru!2seg!4v1795454835784!5m2!1sru!2seg"
+						width="1180"
+						height="400"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="strict-origin-when-cross-origin"
+					></iframe>
+					<!-- <img class="map__img" src="./img/map/map.jpg" alt="" /> -->
 				</div>
 			</section>
 
@@ -485,11 +618,23 @@
 								</h3>
 								<div class="topic__content">
 									<p>
-										Чтобы <a href="">добраться</a> в наш коворкинг, используйте
-										общественный транспорт, такой как метро или автобус. Наш
-										офис расположен в непосредственной близости от станции
-										метро, выходите на выходе, указанном в нашем адресе.
-										Пешеходный подход к офису обеспечен для вашего удобства.
+										Для заказа пропуска в наш коворкинг вы можете
+										воспользоваться удобной онлайн формой на нашем сайте. Просто
+										заполните необходимую информацию, включая ваше имя,
+										контактные данные и предпочтительный срок пользования
+										коворкингом. Наша команда оперативно обработает ваш запрос и
+										свяжется с вами для уточнения деталей и подтверждения
+										бронирования.
+									</p>
+									<p>
+										Если у вас возникли вопросы или вам нужна дополнительная
+										помощь при заказе пропуска, не стесняйтесь обращаться к
+										нашему отделу клиентского обслуживания. Мы готовы ответить
+										на все ваши запросы и предоставить подробную информацию о
+										наших услугах. Вы также можете связаться с нами по телефону
+										или отправить электронное письмо, и наш специалист с
+										удовольствием поможет вам сделать заказ и подобрать
+										оптимальное решение для ваших потребностей.
 									</p>
 								</div>
 							</section>
@@ -499,13 +644,13 @@
 									<button class="topic__btn" type="button">
 										<span class="topic__title">Как добраться</span>
 										<img
-											src="./img/icon/btn-minus.svg"
+											src="./img/icon/btn-plus.svg"
 											alt="open"
 											class="topic__icon"
 										/>
 									</button>
 								</h3>
-								<div class="topic__content topic__content--open">
+								<div class="topic__content">
 									<p>
 										Чтобы <a href="">добраться</a> в наш коворкинг, используйте
 										общественный транспорт, такой как метро или автобус. Наш
@@ -529,11 +674,22 @@
 								</h3>
 								<div class="topic__content">
 									<p>
-										Чтобы <a href="">добраться</a> в наш коворкинг, используйте
-										общественный транспорт, такой как метро или автобус. Наш
-										офис расположен в непосредственной близости от станции
-										метро, выходите на выходе, указанном в нашем адресе.
-										Пешеходный подход к офису обеспечен для вашего удобства.
+										Наш коворкинг предоставляет широкий выбор вариантов парковки
+										для удобства наших клиентов. Прямо возле здания нашего офиса
+										расположены выделенные парковочные места, где вы можете
+										оставить свой автомобиль в течение всего вашего визита. Эти
+										места обеспечивают удобный доступ к нашему зданию, сокращая
+										время и усилия, затрачиваемые на поиск парковочного места. В
+										нескольких минутах ходьбы от нашего коворкинга есть
+										несколько общественных парковочных зон, где вы можете
+										оставить свой автомобиль, если парковочные места прямо у
+										нашего здания заняты.
+									</p>
+									<p>
+										В нескольких минутах ходьбы от нашего коворкинга есть
+										несколько общественных парковочных зон, где вы можете
+										оставить свой автомобиль, если парковочные места прямо у
+										нашего здания заняты.
 									</p>
 								</div>
 							</section>
@@ -551,16 +707,16 @@
 					<div class="footer__nav">
 						<ul class="nav-footer">
 							<li class="nav-footer__item">
-								<a href="" class="nav-footer__link">Локация </a>
+								<a href="#location" class="nav-footer__link">Локация </a>
 							</li>
 							<li class="nav-footer__item">
-								<a href="" class="nav-footer__link"> Сервис </a>
+								<a href="#services" class="nav-footer__link"> Сервис </a>
 							</li>
 							<li class="nav-footer__item">
-								<a href="" class="nav-footer__link"> Тарифы </a>
+								<a href="#price" class="nav-footer__link"> Тарифы </a>
 							</li>
 							<li class="nav-footer__item">
-								<a href="" class="nav-footer__link"> Расположение</a>
+								<a href="#map" class="nav-footer__link"> Расположение</a>
 							</li>
 						</ul>
 					</div>
@@ -591,5 +747,38 @@
 				</div>
 			</div>
 		</footer>
+		<section class="modal">
+			<div class="modal__body">
+				<button class="modal__close" id="closeBtn" type="button">
+					<img src="./img/icon/modal-close.svg" alt="close" />
+				</button>
+				<div class="modal__header">
+					<h2 class="modal__title">Заказать звонок</h2>
+					<p>Перезвоним в течении 15 минут</p>
+				</div>
+				<form class="modal__inputs">
+					<input type="text" class="input" placeholder="Имя" />
+					<input type="number" class="input" placeholder="Телефон" />
+					<label class="modal__checkbox-label">
+						<input type="checkbox" class="real-checkbox visually-hidden" />
+						<span class="fake-checkbox"></span>
+						Согласен на обработку персональных данных
+					</label>
+					<button href="#!" class="modal__btn button btn-dark">
+						Оставить заявку
+					</button>
+				</form>
+			</div>
+		</section>
+		<a href="#top" class="top-link" id="scrollToTopBtn">
+			<img src="./img/icon/arrow-up.svg" alt="" />
+		</a>
+		<script src="./js/tine/tiny-slider.js"></script>
+
+		<script src="./js/scrollToTop.js"></script>
+		<script src="./js/mobile-nav.js"></script>
+		<script src="./js/modal.js"></script>
+		<script src="./js/accordion.js"></script>
+		<script src="./js/main.js"></script>
 	</body>
 </html>

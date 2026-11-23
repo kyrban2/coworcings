@@ -1,3 +1,6 @@
+.locations{
+	@include scrollTopMargen;
+}
 .locations__row {
 	display: flex;
 	justify-content: space-between;

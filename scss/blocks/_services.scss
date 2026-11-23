@@ -1,6 +1,5 @@
 .services {
-
-
+@include scrollTopMargen;
 &__title {
 	min-width: 570px;
 	margin-bottom: 40px;

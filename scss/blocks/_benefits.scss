@@ -1,4 +1,5 @@
 .benefits {
+	@include scrollTopMargen;
 	&__row {
 		display: flex;
 		gap: 30px;

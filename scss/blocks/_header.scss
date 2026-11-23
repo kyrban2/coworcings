@@ -11,6 +11,9 @@
 	}
 	&__logo {
 		flex-shrink: 0;
+		@include mobile{
+			width:120px;
+		}
 	}
 	&__nav {
 		@include mobile {

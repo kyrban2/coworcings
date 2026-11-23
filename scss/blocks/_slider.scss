@@ -1,15 +1,21 @@
 .slider{
-display: flex;
-justify-content: center;
-column-gap: 10px;
-overflow: hidden;
+
 @include mobile{
 	overflow: scroll;
 }
-&__img {
+
+img {
 	border-radius: 8px;
-}
+ object-fit: cover;
+
+        max-width: unset !important;
+        // height: unset !important;
+        height: 400px !important;
+
 @include mobile{
-	height: 250px;
+	height: 250px !important;
 }
+}}
+.slider > div:first-child{
+	padding-left: 15px;
 }

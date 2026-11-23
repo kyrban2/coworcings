@@ -4,11 +4,13 @@
 	align-items: center;
 	@include mobile {
 		flex-direction: column;
+		font-size: 14px ;
 	}
 }
 
 a.nav-footer__link {
 	transition: color 0.2s ease-in;
+
 }
 a.nav-footer__link:hover {
 	color: #00ae6c;

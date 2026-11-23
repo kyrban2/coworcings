@@ -1,4 +1,6 @@
-
+.map{
+@include scrollTopMargen;
+}
 
 .map__title {
 	margin-bottom: 20px;
@@ -18,10 +20,16 @@ p{
 	margin-bottom: 0.5em;
 }
 }
-
+.map__iframe,
 .map__img{
 	border-radius: 40px;
 	@include mobile{
 		border-radius: 20px;
+	
+
+height: 400px;
+object-fit: cover;
+
 	}
 }
+
