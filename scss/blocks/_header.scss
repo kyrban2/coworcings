@@ -21,6 +21,7 @@
 		}
 	}
 	&__nav-btn {
+		height: 27px;
 		display: none;
 		@include mobile {
 			display: block;
